@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Sig om du kan komme!{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="name">Navn:</label>
+    <input name="name" id="name" required>
+    <input type="radio" name="attending_yes" id="attending_yes">
+    <label for="attending_yes">Jeg kan godt komme.</label>
+    <input type="radio" name="attending_no" id="attending_no">
+    <label for="attending_no">Jeg kan ikke komme.</label>
+    <input type="submit" value="Afsend svar">
+  </form>
+{% endblock %}
